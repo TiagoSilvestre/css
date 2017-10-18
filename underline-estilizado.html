@@ -1,0 +1,27 @@
+<style>
+.dropbtn
+    text-decoration: none;
+    z-index: 1;
+
+    &:before
+        content: "";
+        position: absolute;
+        width: 70%;
+        height: 3px;
+        margin: 0 auto;
+        bottom: 0;
+        left: 0; 
+        right: 0; 
+        background: #ec8f55;
+        visibility: hidden;
+        border-radius: 5px;
+        transform: scaleX(0);
+        transition: .25s linear;
+
+    &:hover:before, &:focus:before
+        visibility: visible;
+        transform: scaleX(1);
+</style>
+<button class="dropbtn">
+	TIPO DE AULA
+</button>
