@@ -1,0 +1,45 @@
+<link rel="stylesheet" type="text/css" href="style.css">
+<header>
+	<div class="wrapper">
+
+		<div class="bloc1">
+			<img id="img-logo" src="logo.png">
+		</div>
+
+		<a href="#" id="icon-responsive">&#9776;</a>
+
+		<nav class="bloc2">
+			<ul>
+				<li><a href="#">Home</a></li>
+				<li><a href="#">Features</a></li>
+				<li><a href="#">Products</a></li>
+				<li><a href="#">Contact</a></li>
+			</ul>
+		</nav>
+
+		<div class="bloc3">
+			<div>
+				<p>Login</p>
+				<p>Logout</p>
+			</div>
+		</div>
+
+	</div>
+</header>
+
+
+<script>
+	var acc = document.getElementById("icon-responsive");
+
+	acc.onclick = function () {
+		this.classList.toggle("active");
+
+		/* Toggle between hiding and showing the active panel */
+		var panel = this.nextElementSibling;
+		if (panel.style.display === "block") {
+			panel.style.display = "none";
+		} else {
+			panel.style.display = "block";
+		}
+	}
+</script>

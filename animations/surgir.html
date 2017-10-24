@@ -1,0 +1,58 @@
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+<style type="text/css">
+*{
+	margin: 0;
+	padding: 0;
+}
+.head{
+	width: 100%;
+	height: 70px;
+	background: salmon;
+
+}
+
+a{
+	color: white;
+	display: block;
+	text-decoration: none;
+    font-family: sans-serif;
+}
+
+.btn{
+	width: 100px;
+	background: blue;
+	text-align: center;
+	height: 200px;
+	position: fixed;
+	top: 70px;
+	right: 0;
+	transition: 0.2s
+}	
+</style>
+
+
+<div class="head" id="target">
+	HEADER
+</div>
+
+<div class="btn">
+	<a href="#">Reservar</a>
+	<a href="#">Reservar</a>
+	<a href="#">Reservar</a>
+	<a href="#">Reservar</a>
+</div>
+
+
+<script>
+$("#target").click(function(){
+
+	var x = document.getElementsByClassName("btn");
+
+	if($(x).css("transform" ) == 'none' ){
+        $(x).css("transform","translateY(-270px)");
+    } else {
+        $(x).css("transform","" );
+    }
+});
+</script>

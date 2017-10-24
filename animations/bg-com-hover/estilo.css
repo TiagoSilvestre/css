@@ -1,0 +1,123 @@
+.section {
+    width: 100%;
+    height: auto;
+}
+.section .container-fullw {
+    width: 100%;
+    max-width: none;
+}
+.section-home-atividades .home-atividades-titulo {
+    font-size: 32px;
+    line-height: 5;
+    text-transform: uppercase;
+    font-weight: 200;
+    font-style: italic;
+    color: #1D1A3F;
+    text-align: center;
+}
+
+.home-lista-atividades {
+    width: 100%;
+}
+
+.home-ativ {
+    float: left;
+    width: 50%;
+    height: 0;
+    padding-bottom: 38%;
+    background-color: #999;
+    position: relative;
+    background-image: url(atividades3.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+
+.home-ativ .home-ativ-container {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+    opacity: 0;
+    background-size: cover;
+    background-position: center center;
+}
+.home-ativ-container {
+    background-image: url(filtro-grad.png);
+}
+.home-ativ .centro-home-ativ {
+    text-align: center;
+    color: #fff;
+    opacity: 0;
+    padding-top: 36%;
+    -webkit-transform: translate3d(0, 100px, 0);
+    transform: translate3d(0, 100px, 0);
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+}
+
+.home-ativ .centro-home-ativ h3 {
+    font-size: 36px;
+    text-transform: uppercase;
+    font-weight: 200;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+.home-ativ .centro-home-ativ span {
+    display: block;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.home-ativ .ativ-svg {
+    width: auto;
+    height: 24px;
+    color: #fff;
+    font-size: 20px;
+    line-height: 24px;
+    text-transform: uppercase;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    opacity: 0;
+    font-weight: 200;
+}
+
+.home-ativ svg {
+    width: 17px;
+    height: 17px;
+    fill: #fff;
+    position: relative;
+    top: 2px;
+    margin-left: 5px;
+}
+
+.home-ativ:hover .home-ativ-container {
+    opacity: 1;
+}
+
+.home-ativ:hover .centro-home-ativ {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+.home-ativ:hover .ativ-svg {
+    opacity: 1;
+}
