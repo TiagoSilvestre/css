@@ -1,0 +1,300 @@
+<!--
+<div class="container">
+    <div class="row">
+        <div class="column1">
+            <div class="spot"> 
+                <span>01</span>
+            </div>
+        </div>
+
+        <div class="column2">
+            <div class="spot"> 
+                <span>02</span>
+            </div>
+        </div>
+        <div class="column3">
+            <div class="spot"> 
+                <span>03</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+BACKUP ecomerce builtin
+
+
+$prefix: ae2bikemap
+$grayColor: #ccc
+$blueColor: #1976d2
+$whiteColor: #fff
+
+.#{$prefix}-container
+    padding: 20px
+    border: 1px solid $grayColor
+    overflow-x: auto
+    display: flex
+    flex-direction: column
+    align-items: center
+
+.#{$prefix}-container__row
+    display: flex
+
+.#{$prefix}-container__row__slot
+    width: 70px
+    height: 70px
+
+    display: flex
+    align-items: center
+    justify-content: center
+
+.#{$prefix}-container__row__slot__screen
+    display: flex
+    justify-content: center
+    align-items: center
+
+    width: 100%
+    height: 20px
+    background: $grayColor
+
+.#{$prefix}-container__row__slot__door,
+.#{$prefix}-container__row__slot__other
+    height: 100%
+    width: 100%
+
+.#{$prefix}-container__row__slot__instructor
+    border: 2px solid $blueColor
+    border-radius: 50%
+    height: 65px
+    width: 65px
+
+    background-size: cover !important
+    background-repeat: no-repeat !important
+
+.#{$prefix}-container__row__slot__bike
+    border: 1px solid $blueColor
+    border-radius: 50%
+    height: 45px
+    width: 45px
+
+    display: flex
+    justify-content: center
+    align-items: center
+
+.#{$prefix}-container__row__slot__bike--unavailable
+    background: $grayColor
+    color: $blueColor
+
+.#{$prefix}-container__row__slot__bike--available
+    color: $blueColor
+    cursor: pointer
+
+.#{$prefix}-container__row__slot__bike--available:hover
+    background: $blueColor
+    color: $whiteColor
+
+.#{$prefix}-container__row__slot__bike--booked
+    background: $blueColor
+    color: $whiteColor
+
+
+@media screen and (min-width: 600px) and (max-width: 959px)
+    .#{$prefix}-container
+        align-items: stretch
+        overflow-x: auto
+        
+@media screen and (max-width: 599px)
+    .#{$prefix}-container
+        align-items: stretch
+        overflow-x: auto
+
+    .#{$prefix}-container__row
+        margin: 5px 0
+
+    .#{$prefix}-container__row__slot__blank,
+    .#{$prefix}-container__row__slot
+        margin: 0 5px
+        width: 40px
+        height: 40px
+
+    .#{$prefix}-container__row__slot__instructor,
+    .#{$prefix}-container__row__slot__bike
+        width: 40px
+        height: 40px
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+****ESSE AQUI È DO bikemap-theme
+
+
+
+$whiteColor: #fff
+$black: #424242
+
+=ae2-bikemap-theme($theme)
+
+    $primary: map-get($theme, primary)
+    $accent: map-get($theme, accent)
+
+    $primaryColor: mat-color($primary)
+    $accentColor: mat-color($accent)
+
+    .ae2bikemap-container
+        padding: 25px
+        margin: 5px 0
+        border: 1px solid $black
+        overflow-x: auto
+
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+
+    .ae2bikemap-container_title
+        font-size: 30px
+        font-family: $fontFamily
+        color: $black
+    
+    .ae2bikemap-container_matrix
+        overflow-x: auto
+
+        display: flex
+        flex-direction: column
+        align-items: center
+
+    .ae2bikemap-container__row
+        display: flex
+
+    .ae2bikemap-container__row__slot
+        width: 70px
+        height: 70px
+        font-family: $fontFamily
+
+        display: flex
+        align-items: center
+        justify-content: center
+
+    .ae2bikemap-container__row__slot__screen
+        display: flex
+        justify-content: center
+        align-items: center
+
+        width: 100%
+        height: 20px
+        background: $black
+        color: $whiteColor
+
+    .ae2bikemap-container__row__slot__door,
+    .ae2bikemap-container__row__slot__other
+        height: 100%
+        width: 100%
+
+    .ae2bikemap-container__row__slot__instructor
+        border: 2px solid $accentColor
+        border-radius: 50%
+        height: 65px
+        width: 65px
+
+        background-size: cover !important
+        background-repeat: no-repeat !important
+
+    .ae2bikemap-container__row__slot__bike
+        border: 1px solid $accentColor
+        border-radius: 50%
+        height: 45px
+        width: 45px
+
+        display: flex
+        justify-content: center
+        align-items: center
+
+    .ae2bikemap-container__row__slot__bike--unavailable
+        background: mat-color($primary, default, 0.5)
+        opacity: 0.5
+        color: $accentColor
+
+    .ae2bikemap-container__row__slot__bike--available
+        color: $accentColor
+        cursor: pointer
+
+    .ae2bikemap-container__row__slot__bike--available:hover
+        background: $accentColor
+        color: $whiteColor
+
+    .ae2bikemap-container__row__slot__bike--booked
+        background: $accentColor
+        color: $whiteColor
+        cursor: pointer
+
+    @media screen and (min-width: 600px) and (max-width: 959px)
+        .ae2bikemap-container,
+        .ae2bikemap-container_matrix
+            align-items: stretch
+            overflow-x: auto
+
+        .ae2bikemap-container_title
+            font-size: 25px
+            
+    @media screen and (max-width: 599px)
+        .ae2bikemap-container,
+        .ae2bikemap-container_matrix
+            align-items: stretch
+            overflow-x: auto
+
+        .ae2bikemap-container__row
+            margin: 5px 0
+
+        .ae2bikemap-container__row__slot__blank,
+        .ae2bikemap-container__row__slot
+            margin: 0 5px
+            width: 40px
+            height: 40px
+
+        .ae2bikemap-container__row__slot__instructor,
+        .ae2bikemap-container__row__slot__bike
+            width: 40px
+            height: 40px
+
+        .ae2bikemap-container_title
+            font-size: 20px        
+
+-->
+
