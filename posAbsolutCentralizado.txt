@@ -1,0 +1,29 @@
+
+            <div class="ae2event-subscriber-counter">
+                <div class="ae2event-counter-background"></div>
+                <div class="ae2event-counter">14/28</div>
+            </div>
+
+
+
+
+/*************** SASS *********************/
+
+    .ae2event-subscriber-counter
+        height: 4px
+        width: 100%
+        background: red
+        margin: 17px 0px
+        position: relative
+
+    .ae2event-counter-background
+        background: blue
+        height: 100%
+        width: 60%
+    
+    .ae2event-counter
+        position: absolute;
+        background: yellow;
+        top: 3px;
+        left: 50%;
+        transform: translate(-50%, -50%);
